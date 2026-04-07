@@ -1,0 +1,62 @@
+body {
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background: linear-gradient(0deg, #222222, #201824, #112121, #222222);
+}
+
+hr {
+    visibility: hidden;
+}
+
+hr #sep {
+    height: 1vh;
+}
+
+.banner-img {
+    height: 33vh;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+} .banner-img img {
+    padding: 1rem;
+}
+
+.banner, .align-btn {
+    align-items: center;
+    text-align: center;
+}
+.text-center {
+    text-align: center;
+}
+
+.rounded {
+  border-radius: 16px;
+}
+
+.bluehighlight {
+    display: flex;
+    border-radius: 10px;
+    padding: 0.1rem;
+    background-color: aqua;
+    height: 5rem;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.bluehighlight:hover {
+    display: flex;
+    border-radius: 10px;
+    padding: 0.1rem;
+    background-color: rgb(0, 152, 152);
+    height: 5rem;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.bluehighlight p {
+    margin: 0;
+    color: black;
+}
+
+#footer p {
+    margin-bottom: 0;
+}
