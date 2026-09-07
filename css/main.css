@@ -60,3 +60,64 @@ hr #sep {
 #footer p {
     margin-bottom: 0;
 }
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.grid > div {
+  flex: 1 1 300px;
+  display: flex;
+}
+
+.grid > div > article {
+  width: 100%;
+  min-height: 250px; /* Minimum height, but grows with content */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--border-radius, 0.25rem);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Buttons stay at bottom */
+}
+
+/* Overlay + text: HIDDEN by default */
+.grid > div > article::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.grid > div > article > * {
+  position: relative;
+  z-index: 2;
+  color: #fff !important;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* --- HOVER: Show overlay + text --- */
+.grid > div > article:hover::before {
+  opacity: 1; /* Dark overlay appears */
+}
+
+.grid > div > article:hover > * {
+  opacity: 1; /* Text fades in */
+}
+
+/* Individual project backgrounds */
+.project-luso-urbanist   { background-image: url('/img/violet.webp'); }
+.project-entraco         { background-image: url('/img/eixonorte.webp'); }
+.project-subversivo      { background-image: url('/img/subversivo.webp'); }
+.project-tudomasnada     { background-image: url('/img/tudomasnada.webp'); }
+.project-olago           { background-image: url('/img/lelac.webp'); }
